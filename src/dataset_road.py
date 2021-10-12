@@ -1,4 +1,3 @@
-#%%
 import numpy as np
 
 from scipy.io import loadmat
@@ -194,7 +193,6 @@ class stuckDataset(Dataset):
             # road_state_label = 0(deep) or 1(shallow)
             # slip_ratio_label = (data_length=556, #num_wheels=4)
             # road = [0, 1](mud road) or [1, 0](sand road)
-            # self.make_sequence(value_list, pos_list, road_state_label, road)
 
             value_list = self.normalization(value_list)
             # value_list = self.normalization(value_list[:, :-1])
@@ -265,34 +263,3 @@ class stuckDataset(Dataset):
             #        X         X        sensor_data=(547, num_sequence=10, feautre_dim(=10)),                                       road_state_label_data=(547,), slip_ratio_label_data=(547, 4), pos_data=(547, 2)
             
             self.sensor_data.append(feature) 
-
-# #%%
-# from utils import cfg_read
-# data_keys = cfg_read('cfg/data_keys.json')
-# keys_to_num_dict = {
-#                 key : idx for idx, key in enumerate(data_keys)
-#             }
-
-# non_wheel_idx_list = [idx for idx, key in enumerate(data_keys) if 'Wheel_Spd' not in key]
-# # for idx, key in enumerate(data_keys):
-# #     if 'Wheel_Spd' in key:
-# #         continue
-# #     else:
-# #         non_wheel_idx_list.append()
-        
-        
-# # keys_to_num_dict['CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FL']
-
-# 'CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FL'.find('FL')
-# non_wheel_idx_list
-
-# # #%%
-# # import torch
-# # x = torch.zeros((64, 9))
-# # x_FL = torch.cat(
-# #     [x[:, idx].clone().reshape(-1, 1) for idx in non_wheel_idx_list]
-# #     + [x[:, keys_to_num_dict['CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FL']].clone().reshape(-1, 1)]
-# # , dim=1)
-# # # a = [x[:, idx].clone().reshape(-1, 1) for idx in non_wheel_idx_list] + [x[:, keys_to_num_dict['CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FL']].reshape(-1, 1)]
-# # x_FL.shape
-# # # a[0].shape
