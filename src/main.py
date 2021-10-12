@@ -2,7 +2,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 from dataset_road import stuckDataset
 
