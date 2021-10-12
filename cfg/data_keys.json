@@ -1,0 +1,11 @@
+[
+    "CAN_DBC_HMC__AWD_01_20ms__AWD_Tq",
+    "CAN_DBC_HMC__EMS_01_10ms__Eng_rpm", 
+    "CAN_DBC_HMC__YRS_01_10ms__Long_Acc",
+    "CAN_DBC_HMC__EMS_02_10ms__APS",
+    "CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FL",
+    "CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_FR",
+    "CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_RL",
+    "CAN_DBC_HMC__WHL_01_10ms__Wheel_Spd_RR",
+    "RT2502_Stuck__VelocityLevel__VelForward"
+]   
